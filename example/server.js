@@ -4,6 +4,8 @@ var express = require('express'),
     fs = require('fs')
 
 app = express()
+
+// Serving our static files
 app.get('/', function (req, res) {
   fs.createReadStream('./index.html').pipe(res)
 })
@@ -17,10 +19,12 @@ app.get('/example.js', function (req, res) {
 })
 
 var server = app.listen(3000, function () {
+  // Setup a reloader sub-server on the application and its server
   var reloader = new dy.Reloader(app, server)
   reloader.addReloadable(new dy.Reloadable('example1', {
     watch: './example.js',
     reload: 'example.js'
   }))
+
   console.log('Listening on port %d', server.address().port)
 })

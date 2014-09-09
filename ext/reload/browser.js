@@ -1,5 +1,8 @@
 
 (function (window) {
+  // Browser client library for interfacing with the Node.js reloader server
+  // library/system (see ext/reload/server.js).
+
   var Reloader = function (dy) {
     this.dy = dy
   }
@@ -40,6 +43,7 @@
     script.type = 'text/javascript'
     var url = spec.reload,
         now = (new Date()).getTime()
+    // Add the current time to the URL to ensure the browser loads it.
     if (url.indexOf('?') === -1) {
       url += '?'+now
     } else {
@@ -58,11 +62,13 @@
     head.appendChild(script)
   }
 
+  // Received an event from the websocket.
   Reloader.prototype.onData = function (data) {
     if (data.event === 'changed') {
       this.onModuleChanged(data.name)
     }
   }
+  // Returns a handler that forwards messages to Reloader#onData.
   Reloader.prototype.getMessageHandler = function () {
     var reloader = this
     return function message(data) {

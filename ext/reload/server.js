@@ -3,6 +3,9 @@ var Primus = require('primus'),
     _      = require('lodash'),
     fs     = require('fs')
 
+// Node.js server library for providing reloading functionality over Primus
+// websockets.
+
 var Reloadable = function (name, opts) {
   // Setup defaults
   _.assign(this, {
