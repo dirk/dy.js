@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="../dy.js"></script>
+    <script type="text/javascript" src="dy.js"></script>
     <script type="text/javascript" src="example.js"></script>
+    <script type="text/javascript" src="/.dy/browser.js"></script>
     <script type="text/javascript">
     window.onload = function () {
       dy.load()
+      var reloader = new dy.Reloader(dy)
+      reloader.setup()
     }
     </script>
   </head>

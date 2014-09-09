@@ -1,0 +1,13 @@
+{
+  "name": "dy.js",
+  "description": "Module-based dynamic code reloading",
+  "repository": "dirk/dy.js",
+  "license": "BSD",
+  "dependencies": {},
+  "devDependencies": {
+    "primus": "~2.4.5",
+    "lodash": "~2.4.1",
+    "express": "~4.3.0",
+    "ws": "0.4.x"
+  }
+}
