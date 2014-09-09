@@ -2,6 +2,7 @@
   "name": "dy.js",
   "description": "Module-based dynamic code reloading",
   "repository": "dirk/dy.js",
+  "main": "./lib/index.js",
   "license": "BSD",
   "dependencies": {},
   "devDependencies": {
