@@ -5,11 +5,12 @@
   "repository": "dirk/dy.js",
   "main": "./lib/index.js",
   "license": "BSD",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "primus": "~2.4.5",
     "lodash": "~2.4.1",
-    "express": "~4.3.0",
     "ws": "0.4.x"
+  },
+  "devDependencies": {
+    "express": "~4.3.0"
   }
 }
