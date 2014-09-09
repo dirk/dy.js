@@ -13,7 +13,7 @@ dy.js is designed to be simple, humanist software. As such, it's guiding philoso
 
 ## Reloader
 
-dy.js provides an extension library that allows for automatic code reloading of modules that follow the specification. See the [reloader `README.md`](ext/reload/) for reference.
+dy.js provides an extension library that allows for automatic code reloading of modules that follow the specification. See the [reloader `README.md`](ext/reload#readme) for reference.
 
 ### License
 
